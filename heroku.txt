@@ -1,0 +1,4 @@
+更新代码：
+git add *    /或者把星号改为您修改过的文件路径
+git commit -m "update"    /提交您上面的操作
+git push heroku master  /推送 

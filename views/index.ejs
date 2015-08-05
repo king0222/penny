@@ -1,0 +1,87 @@
+<%- include header %>
+<%- include carousel %>
+<div class="container">
+<div class="hero">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>关注并执着的前端开发！</h2>
+			<p>迈着前端的脚步，向着美与和谐走在时代最前列，前端攻城师应当吹响嘹亮的号角，引领潮流！</p>
+			
+		</div>
+	</div>
+</div>
+<hr />
+<!-- Start team profile -->
+<div class="team">
+	<h3>优雅的前端</h3>
+	<div class="bor hidden-xs"></div>
+	<div class="row">
+		<div class="col-md-3 col-sm-6">
+			<!-- Team member's profile  -->
+			<div class="thumbnail team-profile move-x">
+				<img src="images/html5.jpg" alt="" class="img-responsive img-circle" />
+				<!-- Member's name and designation -->
+				<h5>HTML5</h5>
+				<span>HTML5 是下一代的HTML</span>
+				<div class="social-link">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3 col-sm-6">
+			<div class="thumbnail team-profile move-x">
+				<img src="images/css3.jpg" alt="" class="img-responsive img-circle" />
+				<h5>CSS3</h5>
+				<span>CSS3 是最新的CSS 标准</span>
+				<div class="social-link">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3 col-sm-6">
+			<div class="thumbnail team-profile move-x">
+				<img src="images/nodejs.jpg" alt="" class="img-responsive img-circle" />
+				<h5>Node.js</h5>
+				<span>一个新的开发平台</span>
+				<div class="social-link">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3 col-sm-6">
+			<div class="thumbnail team-profile move-x">
+				<img src="images/phonegap.png" alt="" class="img-responsive img-circle" />
+				<h5>phonegap</h5>
+				<span>创建移动应用程序的开发平台</span>
+				<div class="social-link">
+					<!--
+					<a href="#" class="facebook"><i class="icon-facebook"></i></a>
+					<a href="#" class="google"><i class="icon-google-plus"></i></a>
+					<a href="#" class="twitter"><i class="icon-twitter"></i></a>
+					<a href="#" class="linkedin"><i class="icon-linkedin"></i></a>
+					<a href="#" class="skype"><i class="icon-skype"></i></a>
+					-->
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+<% if (posts.length) { %>
+<div class="allpost">
+<h3>最新文章</h3>
+<div class="bor hidden-xs"></div>
+<%- include post %>
+</div>
+<% } else {%>
+<div class="post">
+<a href="/login" style="text-align:center;line-height:40px;font-size:15px;">没有文章，您可以成为第一个发表的螃蟹！</a>
+</div>
+<% } %>
+<% if (user) { %>
+<div class="newpost">
+<h3>记下您的点滴</h3>
+	<div class="bor hidden-xs"></div>
+<%- include newpost %>
+</div>
+<% } %>
+<hr />
+<%- include copyright %>
+</div>
+<%- include footer %>

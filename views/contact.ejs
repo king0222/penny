@@ -1,0 +1,127 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>contact me</title>
+
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+
+    <link href="/stylesheets/impress.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+
+<body class="impress-not-supported">
+
+
+<div class="fallback-message">
+    <p>您的浏览器 <b>无法支持impress.js所提供的功能</b>, 当前仅能进入普通版本的页面模式.</p>
+    <p>为了更好的体验，您需要下载新版的 <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> 浏览器.</p>
+</div>
+
+
+<div id="impress">
+
+
+    <div class="step slide" data-x="1000" data-y="-1500">
+        <q>站的高，尿的远？ </q><strong>前端开发</strong> <br/> <b>后端开发</b> &nbsp;<b>都是开发！</b>
+        <p class="thoughts">!...</p>
+        <p class="thoughts">!...</p>
+        <p class="thoughts">!...</p>
+    </div>
+
+
+    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+        <span class="try">代码永无止境啊</span>
+        <h1><pre><code><p>Hello world!</p></code></pre></h1>
+        <span class="footnote"><sup>*</sup> 永远的demo</span>
+    </div>
+
+    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+        <p>你<strong>看到了什么?</strong> <br/>
+        前端界面开发<br/>
+        <strong>Node.js开发</strong> phonegap开发</p>
+    </div>
+
+    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+        <p>脚本架构的深入研究<b>!</b> <span class="thoughts">HA...</span></p>
+    </div>
+
+
+    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="1000" data-rotate="300" data-scale="1">
+        <p>javascript <b>设计模式</b> !</p>
+    </div>
+
+
+    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+        <p>to be NO1!<b class="positioning">飘啊飘</b>, <b class="rotating">漂泊</b> 在 <b class="scaling">广州</b> and made in china!</p>
+    </div>
+
+    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
+        <p>流行的 <b>前端框架</b> 最新的前端开发资讯<b class="imagination">on github</b></p>
+    </div>
+
+    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+        <p>一块石头?</p>
+        <q>因为坚忍 所以色彩斑斓</q>
+    </div>
+
+    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
+        <p>Let's do it...</p>
+    </div>
+
+
+    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+        <p><span class="have">do</span> <span class="you">what you want to do</span></p>
+        <p> <span class="noticed">call me Mr</span></p>
+        <p> <span class="in">do</span><span class="you">something awsome</span></p>
+        <span class="footnote">You're the luckiest guy in the world. :)</span>
+    </div>
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+<div id="loginBg"><img src="/images/contact_bg.jpg" /></div>
+<div class="navigate">
+    <a href="/" class="home">返回主页</a>
+    <div class="left" id="prevOne">
+    </div>
+    <div class="right" id="nextOne">
+    </div>
+</div>
+<div class="hint">
+    <p>可使用空格键或方向键来导航视图</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+
+<script src="/javascripts/impress.js"></script>
+<script>
+var api = impress();
+api.init();
+document.getElementById('prevOne').onclick = function(e) {
+    api.prev();
+}
+document.getElementById('nextOne').onclick = function(e) {
+    api.next();
+}
+
+</script>
+
+
+</body>
+</html>
+
+

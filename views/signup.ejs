@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Title here -->
+		<title>login</title>
+		<!-- Description, Keywords and Author -->
+		<meta name="description" content="Your description">
+		<meta name="keywords" content="Your,Keywords">
+		<meta name="author" content="ResponsiveWebInc">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Styles -->
+		<!-- Bootstrap CSS -->
+		<link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+		<!-- Custom CSS -->
+		<link href="stylesheets/login.css" rel="stylesheet">
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="#">
+	</head>
+	
+	<body class="login-body">
+		<div id="loginBg"><img src="images/s4.jpg" /></div>
+		<div class="login-content">
+			<div class="login-dialog">
+				<form action="/signup" class="panel-body" method="post">
+					<fieldset>
+						<div class="field">
+							<label for="name">用户名</label><br/>
+							<input class="text" id="name" name="name" placeholder="user name" tabindex="1" type="text">
+						</div>
+						<div class="field">
+							<label for="email">邮箱</label><br/>
+							<input class="text" id="email" name="email" placeholder="email address" tabindex="2" type="email">
+						</div>
+						<div class="field">
+							<label for="password">密码</label><br/>
+							<input class="text password" id="password" name="password" placeholder="password" tabindex="3" type="password">
+						</div>
+						<div class="field">
+							<label for="password">重复密码</label><br/>
+							<input class="text password" id="passwordRepeat" name="password-repeat" placeholder="password repeat" tabindex="4" type="password">
+						</div>
+						<div class="error">
+							<% if (error) { %>
+							<p><%= error %></p>
+							<% } %>
+						</div>
+					</fieldset>
+					<fieldset class="submit">
+						<input class="submit" name="commit" tabindex="5" type="submit" value="注册">
+					</fieldset>
+				</form>
+			</div>
+			<a href="/login" id="message">已有账号? <span>登录</span></a>
+		</div>
+		<!-- jQuery -->
+		<script src="javascripts/jquery.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="javascripts/bootstrap.min.js"></script>
+		<!-- HTML5 Support for IE -->
+		<script src="javascripts/html5shiv.js"></script>
+		<!-- Custom JS -->
+		<script src="javascripts/custom.js"></script>
+	</body>	
+</html>

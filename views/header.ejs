@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Title here -->
+		<title><%= title %></title>
+		<!-- Description, Keywords and Author -->
+		<meta name="description" content="Your description">
+		<meta name="keywords" content="Your,Keywords">
+		<meta name="author" content="ResponsiveWebInc">
+		<meta property="qc:admins" content="224776643660527351006375" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600' rel='stylesheet' type='text/css'>	 
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+		-->
+		
+		<!-- Styles -->
+		<!-- Bootstrap CSS -->
+		<link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+		<!-- Font awesome CSS -->
+		<link href="/stylesheets/font-awesome.min.css" rel="stylesheet">	
+		<!-- Animate CSS -->
+		<link href="/stylesheets/animate.min.css" rel="stylesheet">
+		<!-- Custom CSS -->
+		<link href="/stylesheets/style.css" rel="stylesheet">
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="#">
+	</head>
+	
+	<body>
+		
+		<div class="outer">
+		
+			<!-- Sidebar Start-->
+			<!-- Menu for tablets and mobile -->
+			<div class="navigation">
+				<a href="#">菜单</a>
+			</div>
+			<div class="sidebar">
+				<!-- Logo of company -->
+				<div class="logo text-center">
+					<h1><a href="#">F&K</a></h1>
+					<p>微主题</p>
+				</div>
+				<div class="sidebar-search">
+					<form action="/search" method="GET">
+						<div class="input-group">
+							<input type="text" class="form-control" name="keyword" placeholder="文章搜索">
+							<span class="input-group-btn">
+								<button class="btn btn-danger" type="submit"><i class="fa fa-search"></i></button>
+							</span>
+						</div>
+					</form>
+				</div>
+				<!-- Navigation menu list -->
+				<ul class="list-unstyled list">
+					<li><a href="/" class="anchorLink"><i class="fa fa-home"></i> 主页</a></li>
+					<li><a href="/#.team" class="anchorLink"><i class="fa fa-meh-o"></i> 优雅的前端</a></li>
+					<% if (posts.length) { %>
+					<li><a href="/#.allpost" class="anchorLink"><i class="fa fa-tags"></i> 最新文章</a></li>
+					<% } %>
+					<% if (user) { %>
+					<li><a href="/#.newpost" class="anchorLink"><i class="fa fa-edit"></i> new 博客</a></li>
+					<% } %>
+					<li><a href="/contact" class="anchorLink"><i class="fa fa-phone"></i> 联系我</a></li>
+					<% if (!user) { %>
+						<li class="dropdown">
+							<a data-toggle="dropdown" href="#"><i class="fa fa-user"></i> Login <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" >
+								<li><a href="/login"><i class="fa fa-user"></i>登录</a></li>
+								<li><a href="/signup"><i class="fa fa-sign-in"></i>注册</a></li>
+							</ul>
+						</li>
+					<% } else {%>
+						<li>
+							<a data-toggle="dropdown" href="#" class="anchorLink"><i class="fa fa-user"></i> <%= user.name %> 大驾光临！<span class="caret"></span</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" >
+								<li><a href="/signout"><i class="fa fa-sign-out"></i>注销</a></li>
+							</ul>
+						</li>
+					<% } %>
+				</ul>
+			</div>
+			<!-- Sidebar End -->
+			
+			<!-- Main Start -->
+			<div class="main">
